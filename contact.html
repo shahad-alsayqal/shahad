@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/2086646cc3.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="contact-cont">
+      <nav>
+        <ul class="about-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">ABOUT ME</a></li>
+          <li><a href="resume.html">RESUME</a></li>
+          <li><a href="blog.html">BLOG</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <h1>Contact me</h1>
+      <div class="contact-info-cont">
+        <div class="contact-info">
+          <i class="fas fa-phone-alt"></i>
+          <p>+966 59 800 3559</p>
+        </div>
+        <div class="contact-info">
+          <i class="fa-solid fa-envelope"></i>
+          <p>shahadalsayqal@gmail.com</p>
+        </div>
+        <div class="contact-info">
+          <i class="fa-brands fa-linkedin"></i>
+          <a href="http://linkedin.com/in/shahad-alsayqal-8809662a5">
+            http://linkedin.com/in/shahad-alsayqal-8809662a5
+          </a>
+        </div>
+      </div>
+
+      <h1>Send a message</h1>
+
+      <form id="contactForm" onsubmit="return validateForm()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+
+        <button type="submit" value="Submit">Send</button>
+      </form>
+    </div>
+
+    <script>
+      function validateForm() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var message = document.getElementById("message").value;
+
+        if (name === "" || email === "" || message === "") {
+          alert("All fields must be filled in");
+          return false;
+        }
+
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          alert("Invalid email format");
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>
