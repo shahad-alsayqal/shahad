@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let counter = 0;
 
   function nextSlide() {
-    if (counter < 5) {
+    if (counter < 6) {
       counter++;
     } else {
       counter = 0;
